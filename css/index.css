@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Space Grotesk;
+    src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Playfair Display;
+    src: url(/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+.body{
+    background-color: rgb(24, 23, 23);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.navContainer{
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navItem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+}
+
+.navItem-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: .5rem;
+    width: 100%;
+    min-width: 200px;
+    object-fit: fill;
+}
+
+.navItem-title{
+    font-family: "Space Grotesk";
+    font-size: 3rem;
+
+}
+
+.navItem-subtitle{
+    font-family: "Playfair Display";
+    font-size: .7rem;
+    margin-bottom: .7rem;
+}
+
+.navItem.active{
+    background: none;
+    background-image: url("/img/cover-actimel.jpg");
+}

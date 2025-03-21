@@ -1,0 +1,21 @@
+/* Reset básico, de listas y enlaces */
+
+* , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  a {
+    display : block;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
