@@ -39,11 +39,6 @@
     align-items: flex-end;
 }
 
-.navItem-link.active{
-    opacity: 100%;
-}
-
-
 .navItem-link{
     color: white;
     text-decoration: none;
@@ -55,6 +50,10 @@
     min-width: 200px;
     object-fit: fill;
     opacity: 30%;
+}
+.navItem-link.active{
+    opacity: 100%;
+
 }
 
 .navItem-title{
@@ -75,6 +74,11 @@
 /*MQ para móviles*/
 
 @media screen and (max-width : 650px) {
+    .body{
+        justify-content: flex-start;
+        align-items: flex-start;
+    } 
+
     .navContainer{
         margin-top: 2rem;
         margin-left: 1rem;
@@ -82,6 +86,7 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: flex-start;
+        height: max-content;
 
     }
 
@@ -99,6 +104,13 @@
 /*MQ para tablets*/
 
 @media screen and (min-width: 650px) and (max-width: 768px){
+
+    .body{
+        justify-content: flex-start;
+        align-items: flex-start;
+    } 
+
+
     .navContainer{
         margin-top: 2rem;
         margin-left: 1rem;
