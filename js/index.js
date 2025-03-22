@@ -16,22 +16,29 @@ const listaDeImagenes =
         "./img/cover-deep-state.jpg"
     ]
 
-
-
-  
-
-
-
 listaDeItems.forEach((item, id) => {
 
     item.classList.add("active");
 
-    item.addEventListener("mouseover", () => {
-        // item.classList.add("active");
+    function cambiarEstilos()  {
+        body.style.backdropFilter= "brightness(0.5)";
         body.style.backgroundImage = `url('${listaDeImagenes[id]}')`;
         body.style.backgroundSize = "cover";
-        body.style.backdropFilter= "brightness(0.5)";
+        body.style.transition = "all .8s ease";
+        // body.style.transition = "backgroundImage 0s ease";
+    }
     
+
+    item.addEventListener("mouseover", () => {
+        // item.classList.add("active");
+        cambiarEstilos();
+    })
+
+    item.addEventListener("mouseout", () => {
+        // item.classList.add("active");
+        body.style.backdropFilter= "brightness(0)";
+        body.style.backgroundImage = `none`;
+
     })
 
     // item.addEventListener("click" , () =>{
@@ -39,7 +46,13 @@ listaDeItems.forEach((item, id) => {
     //     // item.classList.add("active");
     // })
 
+    
+
 });
+
+
+
+
 
 
 

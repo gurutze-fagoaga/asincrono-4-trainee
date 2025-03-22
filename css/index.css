@@ -8,23 +8,26 @@
 }
 
 .body{
-    background-color: rgb(24, 23, 23);
+    background-color: #1a1a1a;
     color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: "brightness(0)";
+    height: 100vh;
 
-
-}
+}   
 
 
 .navContainer{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 6rem;
     width: 100vw;
-    height: 100vh;
     padding: 3rem;
     display: flex;
-    gap: .5rem;
+    flex-direction: row;
+    gap: .7rem;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -34,7 +37,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    
 }
 
 .navItem-link.active{
@@ -48,7 +50,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: .5rem;
+    gap: .7rem;
     width: 100%;
     min-width: 200px;
     object-fit: fill;
@@ -58,12 +60,74 @@
 .navItem-title{
     font-family: "Space Grotesk";
     font-size: 3rem;
+    white-space: nowrap;
 
 }
 
 .navItem-subtitle{
     font-family: "Playfair Display";
-    font-size: .7rem;
-    margin-bottom: .7rem;
+    font-size: .8rem;
+    margin-bottom: .8rem;
 }
 
+
+
+/*MQ para móviles*/
+
+@media screen and (max-width : 650px) {
+    .navContainer{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    .navItem-link{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navItem-title{
+        font-size: 2rem;
+    }
+}
+
+/*MQ para tablets*/
+
+@media screen and (min-width: 650px) and (max-width: 768px){
+    .navContainer{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+  
+    }
+  
+    .navItem-link{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+ 
+  }
+
+
+
+/*MQ para pantallas grandes*/
+
+@media (min-width: 1280px) and (max-width: 3000px) {
+
+    .navItem-title{
+        font-size: 4rem;
+    }
+
+    .navItem-subtitle{
+        font-size: 2rem;
+    }
+}
